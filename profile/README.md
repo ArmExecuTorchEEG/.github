@@ -5,6 +5,11 @@
 **CorteX ARM** by team ArmExecuTorchEEG: real-time motor-imagery EEG decoding (left vs right hand) on the Alif Ensemble E8 (Cortex-M55 + Ethos-U85) with ExecuTorch. Built for the [Arm + ExecuTorch: Edge AI Challenge](https://arm-executorch.devpost.com/), San Francisco State University, October 17–18, 2026.
 
 <p align="center"><picture>
+<source media="(prefers-color-scheme: dark)" srcset="overview-dark.png">
+<img src="overview.png" alt="Overview: an EEG cap is the target input; in this demo the public BCI Competition IV 2a dataset replaces it. 22-channel EEG streams over UART at 250 Hz into the Alif E8 board (Cortex-M55 preprocessing, Ethos-U85 inference), which sends the predicted hand to a PC that moves a cursor left or right" width="100%">
+</picture><br><sub>Overview. No EEG cap in this demo: held-out trials from the public BCI Competition IV 2a dataset stream to the board as a cap would.</sub></p>
+
+<p align="center"><picture>
 <source media="(prefers-color-scheme: dark)" srcset="pipeline-dark.svg">
 <img src="pipeline.svg" alt="System architecture: BCI IV 2a replay and host bridge on the laptop, UART into the Alif E8, preprocessing on the Cortex-M55, TinyEEGNet-wide int8 on the Ethos-U85, IMU motion gate, LEDs and JSON out to the demo UI" width="900">
 </picture><br><sub>System architecture. Details, demo video and results: <a href="https://github.com/ArmExecuTorchEEG/CorteX-ARM">CorteX-ARM</a>.</sub></p>
