@@ -15,8 +15,23 @@
 |---|---|
 | Hardware | Alif Ensemble E8 DevKit: Cortex-M55 400 MHz + Ethos-U85 NPU, on-board IMU |
 | Model | TinyEEGNet-wide, 3,426 parameters, 11.4 KB int8 `.pte`, all compute on the NPU |
-| Accuracy | 77.1 % on the physical E8 (70 trials); 74.6 % int8 over all 9 BCI IV 2a subjects |
-| Speed | 0.32 ms per inference on the Ethos-U85 (Corstone-320 FVP) |
+
+## Results
+
+| Model | Test | Accuracy | Measured on |
+|---|---|---|---|
+| Generic | 70 held-out trials | **77.1 %** (54/70) | physical E8 |
+| Generic | 1,080 unseen trials, all 9 BCI IV 2a subjects | 74.6 % int8 | laptop, int8 reference |
+| Subject-specific | subject 1, session 2 | 79.2 % int8 (114/144) | physical E8 |
+
+| Check | Value |
+|---|---|
+| Model on the board = release | `.pte` read back from MRAM, sha256 matches |
+| FVP = TOSA reference | 1,080/1,080 trials bit-exact |
+| Inference on the Ethos-U85 | 128,056 NPU cycles ≈ 0.32 ms at 400 MHz (FVP) |
+| Optimisation v0.1 → v0.5 | −43 % NPU cycles, NPU memory 237 → 124.5 KiB, accuracy 71.5 → 74.6 % |
+
+Videos: [live demo on the E8](https://github.com/ArmExecuTorchEEG/CorteX-ARM#live-demo-on-the-alif-e8) · [from trained model to board](https://github.com/ArmExecuTorchEEG/CorteX-ARM#from-trained-model-to-board-verification). Files: [`tinyeegnet_int8.pte`](https://github.com/ArmExecuTorchEEG/CorteX-ARM/releases/download/v1.0-submission/tinyeegnet_int8.pte) · [`cmsis-executorch.axf`](https://github.com/ArmExecuTorchEEG/CorteX-ARM/releases/download/v1.0-submission/cmsis-executorch.axf) · [`SHA256SUMS`](https://github.com/ArmExecuTorchEEG/CorteX-ARM/releases/download/v1.0-submission/SHA256SUMS). All numbers: [CorteX-ARM Results](https://github.com/ArmExecuTorchEEG/CorteX-ARM#results).
 
 ## Team
 
