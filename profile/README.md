@@ -48,4 +48,4 @@ Videos: [live demo on the E8](https://github.com/ArmExecuTorchEEG/CorteX-ARM/blo
 |---|---|
 | Moamen Soliman | EEG Model Architecture, Training & Optimization |
 | Philippine Chauvet | Embedded AI Engineering, Firmware & Hardware Integration |
-| Jihyung Ku | Frontend Engineering & UI/UX Design |
+| Cindy Ku | Frontend Engineering & UI/UX Design |
