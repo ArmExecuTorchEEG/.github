@@ -16,6 +16,10 @@
 | Hardware | Alif Ensemble E8 DevKit: Cortex-M55 400 MHz + Ethos-U85 NPU, on-board IMU |
 | Model | TinyEEGNet-wide, 3,426 parameters, 11.4 KB int8 `.pte`, all compute on the NPU |
 
+## Live demo
+
+<p align="center"><a href="https://github.com/ArmExecuTorchEEG/CorteX-ARM/blob/main/docs/video/live_demo.mp4"><img src="https://github.com/ArmExecuTorchEEG/CorteX-ARM/raw/main/docs/video/live_demo.webp" alt="Live demo on the Alif E8; click for the full-quality video" width="100%"></a><br><sub>Live demo on the Alif E8. Click for the full-quality video.</sub></p>
+
 ## Results
 
 | Model | Test | Accuracy | Measured on |
@@ -31,7 +35,7 @@
 | Inference on the Ethos-U85 | 128,056 NPU cycles ≈ 0.32 ms at 400 MHz (FVP) |
 | Optimisation v0.1 → v0.5 | −43 % NPU cycles, NPU memory 237 → 124.5 KiB, accuracy 71.5 → 74.6 % |
 
-Videos: [live demo on the E8](https://github.com/ArmExecuTorchEEG/CorteX-ARM#live-demo-on-the-alif-e8) · [from trained model to board](https://github.com/ArmExecuTorchEEG/CorteX-ARM#from-trained-model-to-board-verification). Files: [`tinyeegnet_int8.pte`](https://github.com/ArmExecuTorchEEG/CorteX-ARM/releases/download/v1.0-submission/tinyeegnet_int8.pte) · [`cmsis-executorch.axf`](https://github.com/ArmExecuTorchEEG/CorteX-ARM/releases/download/v1.0-submission/cmsis-executorch.axf) · [`SHA256SUMS`](https://github.com/ArmExecuTorchEEG/CorteX-ARM/releases/download/v1.0-submission/SHA256SUMS). All numbers: [CorteX-ARM Results](https://github.com/ArmExecuTorchEEG/CorteX-ARM#results).
+Videos: [live demo on the E8](https://github.com/ArmExecuTorchEEG/CorteX-ARM/blob/main/docs/video/live_demo.mp4) · [from trained model to board](https://github.com/ArmExecuTorchEEG/CorteX-ARM/blob/main/docs/video/deploy_verification.mp4). Files: [`tinyeegnet_int8.pte`](https://github.com/ArmExecuTorchEEG/CorteX-ARM/releases/download/v1.0-submission/tinyeegnet_int8.pte) · [`cmsis-executorch.axf`](https://github.com/ArmExecuTorchEEG/CorteX-ARM/releases/download/v1.0-submission/cmsis-executorch.axf) · [`SHA256SUMS`](https://github.com/ArmExecuTorchEEG/CorteX-ARM/releases/download/v1.0-submission/SHA256SUMS). All numbers: [CorteX-ARM Results](https://github.com/ArmExecuTorchEEG/CorteX-ARM#results).
 
 ## Team
 
