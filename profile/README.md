@@ -16,6 +16,13 @@
 
 **Start here: [CorteX-ARM](https://github.com/ArmExecuTorchEEG/CorteX-ARM)**, the submission: firmware, ML training code, demo UI, results and build instructions. Judged release: [`v1.0-submission`](https://github.com/ArmExecuTorchEEG/CorteX-ARM/releases/tag/v1.0-submission).
 
+
+## Development Repository
+
+### [EEG-BCI-Pipeline-Development](https://github.com/ArmExecuTorchEEG/EEG-BCI-Pipeline-Development)
+
+Explore the EEG signal processing, neural decoding model development, embedded AI integration, firmware development, hardware validation, and engineering work behind **CorteX ARM**.
+
 | | |
 |---|---|
 | Hardware | Alif Ensemble E8 DevKit: Cortex-M55 400 MHz + Ethos-U85 NPU, on-board IMU |
